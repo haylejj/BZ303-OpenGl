@@ -56,7 +56,8 @@ int main(int argc, char** argv)
    	glVertex2f(3.0,1.0);
    	glVertex2f(1.0,1.0);
    glEnd();	
-      	
+   
+      	glDisable(GL_LINE_STIPPLE);
 	
    glFlush();
 
