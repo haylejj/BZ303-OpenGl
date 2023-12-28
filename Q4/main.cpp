@@ -14,7 +14,7 @@ int main(int argc, char** argv)
    glLoadIdentity();
    glOrtho(-10.0, 10.0, -10.0, 10.0, -10.0, 10.0);
    
-   //KOORDÝNAT SÝSTEMÝ
+   //KOORDYNAT SYSTEMY
    glEnable(GL_LINE_STIPPLE);
    glLineStipple(1,0xF0F0);
    
@@ -26,7 +26,7 @@ int main(int argc, char** argv)
    glEnd();
    glDisable(GL_LINE_STIPPLE);
    
-   //Þeklin ilk hali
+   //?eklin ilk hali
    glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
    glLineWidth(3.0);
    glColor3f(0.0,1.0,0.0);
@@ -54,7 +54,7 @@ int main(int argc, char** argv)
    	glVertex2f(3.0,0.0);
    glEnd();
    
-   //2.Operasyon 3,1 noktasýna göre x yönünde 2 kat y yönünde 2 kat büyüt
+   //2.Operasyon 3,1 noktasyna göre x yönünde 2 kat y yönünde 2 kat büyüt
    glLoadIdentity();
    
    glTranslatef(3.0,1.0,0.0);
@@ -69,7 +69,7 @@ int main(int argc, char** argv)
    	glVertex2f(3.0,0.0);
    glEnd();
    
-   //3.Operasyon 1,2 noktasýna göre 270 derece dönder. y eksenine göre simetri al. y yönünde 2 kat büyüt.
+   //3.Operasyon 1,2 noktasyna göre 270 derece dönder. y eksenine göre simetri al. y yönünde 2 kat büyüt.
    
    glLoadIdentity();
    
@@ -92,4 +92,3 @@ int main(int argc, char** argv)
    Sleep(3000);
    return 0;
 }
-
