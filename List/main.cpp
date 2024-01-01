@@ -5,19 +5,22 @@
 	void myinit (void)
 	{
 	glNewList (listName, GL_COMPILE);// liste oluþturma.Bu listenin adý listName deðiþkenine atanýyor.GL_COMPILE ise bu listenin derlenerek oluþturulacaðýný belirtiyor.
-	
+
 	glBegin (GL_TRIANGLES);
 	glVertex2f (0.0, 0.0);
 	glVertex2f (1.0, 0.0);
 	glVertex2f (0.0, 1.0);
 	glEnd ();
-	glColor3f(1.0, 0.0, 0.0);
-	glTranslatef (1.5, 0.0, 0.0);
+	glColor3f(1.0,0.0,0.0);	
+	glTranslatef(1.5,0.0,0.0);
+	
 	glEndList ();
+	
 	glShadeModel (GL_FLAT);
 	}
 	void drawLine (void)
 	{
+		glColor3f(1.0,1.0,0.0);
 	glBegin (GL_LINES);
 	glVertex2f (0.0, 0.5);
 	glVertex2f (15.0, 0.5);
@@ -28,8 +31,11 @@
 	GLuint i;
 	glClear (GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0,1.0,1.0);
-	for (i = 0; i < 10; i++){
+	for (i = 0; i < 5; i++){	
+		
 	glCallList (listName);
+	glLoadIdentity();
+	glRotatef(10.0,0.0,0.0,1.0);
 	}
 	drawLine ();
 	glFlush ();
