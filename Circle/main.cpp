@@ -14,14 +14,16 @@ int main(int argc, char** argv)
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
    glOrtho(-2.0, 2.0, -2.0, 2.0, -1.0, 1.0);
+
 double angle;
 int i;
-int circle_points = 100;
+int circle_points=100;
+
 glBegin(GL_LINE_LOOP);
-for (i = 0; i < circle_points; i++) {
-angle = 2*3.14*i/circle_points;
-glVertex2f(cos(angle), sin(angle));
-}
+	for(i=0;i<circle_points;i++){
+		angle=2*3.14*i/circle_points;
+		glVertex2f(cos(angle),sin(angle));
+	}
 glEnd();
    glFlush();
 

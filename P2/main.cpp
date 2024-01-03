@@ -12,7 +12,7 @@ int main(int argc, char** argv)
    glColor3f(1.0, 1.0, 1.0);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   glOrtho(-10.0, 10.0, -10.0, 10.0, -1.0, 1.0);
+   glOrtho(-5.0, 5.0, -5.0, 5.0, -1.0, 1.0);
    //Koordinat sistemi
    glEnable(GL_LINE_STIPPLE);
    glLineStipple(1,0xF0F0);
@@ -32,7 +32,7 @@ int main(int argc, char** argv)
    		bu arka plan beyaz,çizilecek þey siyah
    		1110 0000 0110 1110
    		0111 0110 0000 0111
-   		0x7507
+   		0x7607
    		
    		bu arka plan siyah çizilecek þey beyaz
    		0001 1111 1001 0001
@@ -42,7 +42,7 @@ int main(int argc, char** argv)
    
    //þeklin ilk hali
    glEnable(GL_LINE_STIPPLE);
-   glLineStipple(1,0x89F8);
+   glLineStipple(1,0x7607);
    glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
    glColor3f(0.0,0.0,1.0);
    glBegin(GL_LINE_LOOP);

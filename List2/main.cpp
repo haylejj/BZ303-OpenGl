@@ -12,6 +12,7 @@ glVertex2f (0.0, 1.0);
 glEnd ();
 glColor3f(1.0, 0.0, 0.0);
 glTranslatef (1.0, 0.0, 0.0);
+//glLoadIdentity();
 glEndList ();
 glShadeModel (GL_FLAT);
 }

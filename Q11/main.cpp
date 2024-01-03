@@ -12,7 +12,7 @@ int main(int argc, char** argv)
    glColor3f(1.0, 1.0, 1.0);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   glOrtho(-20.0, 20.0, -20.0, 20.0, -20.0, 20.0);
+   glOrtho(-40.0, 40.0, -40.0, 40.0, -40.0, 40.0);
    
    //KOORDÝNAT SÝSTEMÝ
    glEnable(GL_LINE_STIPPLE);
@@ -48,26 +48,26 @@ int main(int argc, char** argv)
   
   glColor3f(1.0,0.0,0.0);
   glBegin(GL_LINES);
-  	glVertex2f(-7.0,-2.0);
-  	glVertex2f(-2.0,-2.0);
+  	glVertex2f(-2.0,2.0);
+  	glVertex2f(-2.0,4.0);
   glEnd();
   
   glColor3f(0.0,1.0,0.0);
   glBegin(GL_LINES);
-  	glVertex2f(-2.0,-2.0);
-  	glVertex2f(-2.0,-9.0);
+  	glVertex2f(-4.0,4.0);
+  	glVertex2f(-2.0,4.0);
   glEnd();
   
   glColor3f(0.0,0.0,1.0);
   glBegin(GL_LINES);
-  	glVertex2f(-2.0,-9.0);
-  	glVertex2f(-7.0,-9.0);
+  	glVertex2f(-4.0,4.0);
+  	glVertex2f(-4.0,2.0);
   glEnd();
   
   glColor3f(0.0,1.0,1.0);
   glBegin(GL_LINES);
-  	glVertex2f(-7.0,-9.0);
-  	glVertex2f(-7.0,-2.0);
+  	glVertex2f(-4.0,2.0);
+  	glVertex2f(-2.0,2.0);
   glEnd();
   
   

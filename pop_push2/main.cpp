@@ -56,8 +56,6 @@ int main(int argc, char** argv)
 	glPopMatrix(); // bu durumda sadece ref,Tr(1,1) calýsacak.
 	
 	
-	
-	
 	glColor3f(0.0,0.0,1.0);
 	glBegin(GL_LINE_LOOP);
       glVertex2f(1.0, 1.0);

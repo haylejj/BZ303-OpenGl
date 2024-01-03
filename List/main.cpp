@@ -32,10 +32,9 @@
 	glClear (GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0,1.0,1.0);
 	for (i = 0; i < 5; i++){	
-		
 	glCallList (listName);
 	glLoadIdentity();
-	glRotatef(10.0,0.0,0.0,1.0);
+	glRotatef(i*10.0,0.0,0.0,1.0);
 	}
 	drawLine ();
 	glFlush ();

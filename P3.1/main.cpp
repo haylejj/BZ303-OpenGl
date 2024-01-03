@@ -25,9 +25,8 @@ int main(int argc, char** argv)
    	glVertex2f(0.0,20.0);
   glEnd();
   glDisable(GL_LINE_STIPPLE);
-   glBegin(GL_LINES);
+   glBegin(GL_POINTS);
 			glVertex2f(0.0,0.0);
-			glVertex2f(1.0,2.0);
 		glEnd();
    glMatrixMode(GL_MODELVIEW);
    glLoadIdentity();
@@ -38,16 +37,17 @@ int main(int argc, char** argv)
    bizim yeni transformasyon matrisimiz oluyor ve döngü yeniden baþlýyor yani her seferinde transformasyon matrisi tr 4,3 oluyor
    sonra 45*i rotasyon iþlemini yapýyoruz.
    */
-   for(int i=0;i<6;i++)
-   {
-		glPushMatrix();
-		glRotatef(45.0*i,0.0,0.0,1.0);
-		glLineWidth((i+1));
-		glBegin(GL_LINES);
-			glVertex2f(0.0,0.0);
-			glVertex2f(1.0,2.0);
-		glEnd();
-		glPopMatrix();
+   int i;
+   for(i=0;i<8;i++){
+	glPushMatrix();
+	glRotatef(45.0*i,0.0,0.0,1.0);
+	
+	glPointSize((i+1));
+	glBegin(GL_POINTS);
+		glVertex2f(0.0,0.0);
+	glEnd();
+	glPopMatrix();// burada ilk pushladýðýmýzý popluyoruz ve yeni transformasyon matrisimiz o oluyor yani tr 4,3
+	//bunun anlamý transformasyon matrisini baþlangýca döndürüyoruz. hep 4,3 olacak þekilde ayarladýk baþlarken
    }
    
    

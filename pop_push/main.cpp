@@ -27,7 +27,7 @@ int main(int argc, char** argv)
    glEnd();
    glDisable(GL_LINE_STIPPLE);
    
-   glLineWidth(5);
+   glLineWidth(2);
    	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glColor3f(0.0,1.0,0.0);
 	glBegin(GL_LINE_LOOP);
@@ -55,9 +55,9 @@ int main(int argc, char** argv)
 	glScalef(2.0,2.0,1.0);
 	glTranslatef(-2.0,-2.0,0.0);
 
-	glPopMatrix();
+	glPopMatrix(); // EN SON BU UYGULANIR BURADA.
 	
-	glLineWidth(5);
+	glLineWidth(2);
    	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_LINE_LOOP);
