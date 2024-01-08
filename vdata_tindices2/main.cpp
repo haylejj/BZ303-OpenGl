@@ -24,8 +24,8 @@ Z=3.0;
 GLint i;
 
 static GLfloat vdata[12][3] = {
-{-Z,X,Y}, {X, Y, Z}, {-X, X, -Z}, {-Y, -Z, -Z},
-{Y, Z, X}, {-Z, -X, -X}, {X, X, -X}, {-Z, Z, -X},
+{-Z,X,Y}, {X, Y, Z}, {-X, -X, -Z}, {-Y, -Z, -Z},
+{-Y, Z, X}, {-Z, -X, -X}, {X, X, -X}, {-Z, Z, -X},
 {Z, -X, 0.0}, {-X, X, X}, {Z, -X, 0.0}, {-Z, Y, -Z}
 };
 static GLint tindices[10][4] = {
@@ -35,12 +35,12 @@ static GLint tindices[10][4] = {
 for (i = 0; i < 6; i++) {
 /* color information here */
 //glColor3f((i+1)*0.15, 0.5, 0.5);
-glBegin(GL_TRIANGLES);
-glColor3f (0.0, 1.0, 0.0);
-glVertex2fv(&vdata[tindices[i][0]][0]);
-glColor3f (0.0, 1.0, 0.0);
-glVertex2fv(&vdata[tindices[i][1]][0]);
-glColor3f (0.0, 0.0, 1.0);
+glBegin(GL_LINES);
+
+glVertex3fv(&vdata[tindices[i][0]][0]);
+
+glVertex3fv(&vdata[tindices[i][1]][0]);
+
 glVertex2fv(&vdata[tindices[i+1][2]][1]);
 
 glVertex2fv(&vdata[tindices[i+1][3]][1]);

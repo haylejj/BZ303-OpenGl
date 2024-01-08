@@ -1,0 +1,30 @@
+# Project: List3
+# Makefile created by Dev-C++ 4.9.9.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = 
+OBJ      = main.o $(RES)
+LINKOBJ  = main.o $(RES)
+LIBS     = -L"lib" -L"lib/gcc" -static-libstdc++ -static-libgcc -mwindows -lglaux -lopengl32 
+INCS     = -I"include" 
+CXXINCS  = -I"include"  -I"include/sys"  -I"include/ddk"  -I"include/gdiplus"  -I"include/GL" 
+BIN      = List3.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before List3.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "List3.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)

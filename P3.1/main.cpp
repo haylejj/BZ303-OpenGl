@@ -25,23 +25,52 @@ int main(int argc, char** argv)
    	glVertex2f(0.0,20.0);
   glEnd();
   glDisable(GL_LINE_STIPPLE);
+  glMatrixMode(GL_MODELVIEW);
+   glLoadIdentity();
+   
+   /*
+   glPointSize(5);
+   glTranslatef(4.0,3.0,0.0);
+   glRotatef(135.0,0.0,0.0,1.0);
+   //glTranslatef(1.0,1.0,0.0);
+   
    glBegin(GL_POINTS);
 			glVertex2f(0.0,0.0);
 		glEnd();
-   glMatrixMode(GL_MODELVIEW);
-   glLoadIdentity();
+	
+	glLoadIdentity();
+		
+		glPointSize(5);
    glTranslatef(4.0,3.0,0.0);
-   /*
+   glRotatef(90.0,0.0,0.0,1.0);
+  // glTranslatef(1.0,1.0,0.0);
+   
+   glBegin(GL_POINTS);
+			glVertex2f(0.0,0.0);
+		glEnd();
+		
+   
+   glLoadIdentity();
+   glPointSize(5);
+   glTranslatef(4.0,3.0,0.0);
+   glRotatef(45.0,0.0,0.0,1.0);
+  // glTranslatef(1.0,1.0,0.0);
+   
+   glBegin(GL_POINTS);
+			glVertex2f(0.0,0.0);
+		glEnd();
+   
    burada push pop mantýðý: ilk baþta tr4,3 pushlanýyor stacke sonra ilgili 
    iþlemler yapýlýyor þekil çizildikden sonra pop matrix yapýp stackdeki elemaný cýkartýroyuz.
    bizim yeni transformasyon matrisimiz oluyor ve döngü yeniden baþlýyor yani her seferinde transformasyon matrisi tr 4,3 oluyor
    sonra 45*i rotasyon iþlemini yapýyoruz.
    */
+   glTranslatef(4.0,3.0,0.0);
    int i;
    for(i=0;i<8;i++){
 	glPushMatrix();
 	glRotatef(45.0*i,0.0,0.0,1.0);
-	
+	glTranslatef(1.0,1.0,0.0);
 	glPointSize((i+1));
 	glBegin(GL_POINTS);
 		glVertex2f(0.0,0.0);
